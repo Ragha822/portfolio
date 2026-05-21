@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raghavarshini K - DevOps & Backend Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1f4e78;
+            --secondary: #2e5c8a;
+            --accent: #00d4ff;
+            --dark: #0f172a;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #00d4ff 0%, #0ea5e9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .card {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(226, 232, 240, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: #00d4ff;
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);
+        }
+
+        .skill-badge {
+            background: rgba(31, 78, 120, 0.5);
+            border: 1px solid #00d4ff;
+            color: #00d4ff;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.85rem;
+            margin: 0.25rem;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .skill-badge:hover {
+            background: #00d4ff;
+            color: #0f172a;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, #00d4ff 0%, transparent 100%);
+        }
+
+        .timeline-item {
+            margin-left: 100px;
+            padding-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -70px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: #00d4ff;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.1);
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .nav-link {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: #00d4ff;
+            transition: left 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            left: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-black/20 backdrop-blur-md border-b border-slate-700/50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold gradient-text">RK</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="nav-link text-slate-300 hover:text-cyan-400">About</a>
+                <a href="#skills" class="nav-link text-slate-300 hover:text-cyan-400">Skills</a>
+                <a href="#projects" class="nav-link text-slate-300 hover:text-cyan-400">Projects</a>
+                <a href="#experience" class="nav-link text-slate-300 hover:text-cyan-400">Experience</a>
+                <a href="#contact" class="nav-link text-slate-300 hover:text-cyan-400">Contact</a>
+            </div>
+            <div class="flex space-x-4">
+                <a href="https://github.com/Ragha822" target="_blank" class="text-slate-400 hover:text-cyan-400">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a href="https://linkedin.com/in/raghavarshini-k-8b792026a/" target="_blank" class="text-slate-400 hover:text-cyan-400">
+                    <i class="fab fa-linkedin text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl"></div>
+            <div class="absolute top-40 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        </div>
+
+        <div class="relative text-center max-w-3xl mx-auto">
+            <h1 class="text-6xl md:text-7xl font-bold mb-6 gradient-text float">
+                Raghavarshini K
+            </h1>
+            <p class="text-2xl md:text-3xl text-slate-300 mb-8">
+                Full-Stack DevOps & Backend Engineer
+            </p>
+            <p class="text-lg text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+                Building scalable cloud infrastructure and production-ready microservices. 
+                Published researcher in AI-driven network optimization with 6 months of production experience.
+            </p>
+            <div class="flex justify-center gap-6">
+                <a href="#projects" class="px-8 py-3 bg-cyan-500 text-black font-bold rounded-lg hover:bg-cyan-400 transition">
+                    View My Work
+                </a>
+                <a href="https://github.com/Ragha822" target="_blank" class="px-8 py-3 border-2 border-cyan-500 text-cyan-400 font-bold rounded-lg hover:bg-cyan-500/10 transition">
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 bg-gradient-to-b from-transparent to-black/50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center">
+                <span class="gradient-text">About Me</span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="card p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold mb-6 text-cyan-400">Background</h3>
+                    <p class="text-slate-300 mb-4 leading-relaxed">
+                        I'm a 4th-year Computer Science student at KLE Technological University with a passion for building 
+                        robust, scalable systems. Currently interning at Medicodio AI, where I work on production full-stack 
+                        features and DevOps infrastructure.
+                    </p>
+                    <p class="text-slate-300 leading-relaxed">
+                        My expertise spans containerization, cloud platforms, infrastructure-as-code, and real-time systems. 
+                        I believe in writing clean, documented code and designing systems that scale gracefully.
+                    </p>
+                </div>
+                <div class="card p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold mb-6 text-cyan-400">Highlights</h3>
+                    <ul class="space-y-3 text-slate-300">
+                        <li class="flex items-start">
+                            <span class="text-cyan-400 mr-3 mt-1">→</span>
+                            <span><strong>CGPA:</strong> 8.84/10 | KLE Technological University</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-cyan-400 mr-3 mt-1">→</span>
+                            <span><strong>Published:</strong> Springer Conference (CRM 2025)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-cyan-400 mr-3 mt-1">→</span>
+                            <span><strong>Flipkart Grid 7.0:</strong> National Semifinalist</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-cyan-400 mr-3 mt-1">→</span>
+                            <span><strong>Certified:</strong> JNCIA-Junos (Juniper Networks)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center">
+                <span class="gradient-text">Technical Skills</span>
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Cloud & DevOps -->
+                <div class="card p-8 rounded-xl">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-6">Cloud & DevOps</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">AWS</span>
+                        <span class="skill-badge">GCP</span>
+                        <span class="skill-badge">Azure</span>
+                        <span class="skill-badge">OpenStack</span>
+                        <span class="skill-badge">Kubernetes</span>
+                        <span class="skill-badge">Docker</span>
+                        <span class="skill-badge">CI/CD</span>
+                        <span class="skill-badge">Jenkins</span>
+                        <span class="skill-badge">GitHub Actions</span>
+                        <span class="skill-badge">Infrastructure-as-Code</span>
+                    </div>
+                </div>
+
+                <!-- Languages & Frameworks -->
+                <div class="card p-8 rounded-xl">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-6">Languages & Frameworks</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">JavaScript</span>
+                        <span class="skill-badge">Node.js</span>
+                        <span class="skill-badge">Express.js</span>
+                        <span class="skill-badge">React</span>
+                        <span class="skill-badge">Next.js</span>
+                        <span class="skill-badge">C++</span>
+                        <span class="skill-badge">Java</span>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="card p-8 rounded-xl">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-6">Databases & Tools</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">PostgreSQL</span>
+                        <span class="skill-badge">MongoDB</span>
+                        <span class="skill-badge">Redis</span>
+                        <span class="skill-badge">Socket.IO</span>
+                        <span class="skill-badge">WebSockets</span>
+                        <span class="skill-badge">Git</span>
+                        <span class="skill-badge">Docker Compose</span>
+                    </div>
+                </div>
+
+                <!-- ML/AI -->
+                <div class="card p-8 rounded-xl">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-6">ML & AI</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">TensorFlow</span>
+                        <span class="skill-badge">PyTorch</span>
+                        <span class="skill-badge">scikit-learn</span>
+                        <span class="skill-badge">YOLO11</span>
+                        <span class="skill-badge">Neural Networks</span>
+                        <span class="skill-badge">GANs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 bg-gradient-to-b from-transparent to-black/50">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center">
+                <span class="gradient-text">Featured Projects</span>
+            </h2>
+
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <div class="card p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold text-cyan-400 mb-3">AI-Driven Network Slicing</h3>
+                    <p class="text-slate-400 text-sm mb-4">Real 5G testbed optimization with ML</p>
+                    <p class="text-slate-300 mb-6">
+                        Deployed Open5GS 5G core with srsRAN and USRP B210. Implemented Random Forest ML model for dynamic slice selection achieving 92% accuracy.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs bg-slate-700 px-3 py-1 rounded">Open5GS</span>
+                        <span class="text-xs bg-slate-700 px-3 py-1 rounded">Python</span>
+                        <span class="text-xs bg-slate-700 px-3 py-1 rounded">Random Forest</span>
+                        <span class="text-xs bg-slate-700 px-3 py-1 rounded">5G Networks</span>
+                    </div>
+                    <a href="https://github.com/Ragha822/5g_network-slicing" target="_blank" class="text-cyan-400 hover:text-cyan-300 font-bold">
+                        View on GitHub →
+                    </a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="card p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold text-cyan-400 mb-3">VM Consolidation OpenStack</h3>
+                    <p class="text-slate-400 text-sm mb-4">Intelligent workload balancing & optimization</p>
+                    <p class="text-slate-300 mb-6">
+                        GRU-based model for resource prediction with Integer Linear Programming for VM migration optimization. 25% energy reduction.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs bg-slate-700 px-3 py-1 rounded">OpenStack</span>
+                        <span class="text-xs bg-slate-700 px-3 py-1 rounded">GRU</span>
+                        <span class="text-xs bg-slate-700 px-3 py-1 rounded">ILP</span>
+                        <span class="text-xs bg-slate-700 px-3 py-1 rounded">Cloud</span>
+                    </div>
+                    <a href="https://github.com/Ragha822/vm_consolidation-openstack" target="_blank" class="text-cyan-400 hover:text-cyan-300 font-bold">
+                        View on GitHub →
+                    </a>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="card p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold text-cyan-400 mb-3">Network Intrusion Detection</h3>
+                    <p class="text-slate-400 text-sm mb-4">Deep learning-based security threat detection</p>
+                    <p class="text-slate-300 mb-6">
+                        VAE for anomaly detection (94% accuracy) + RNN classifiers for attack type identification (91% F1-score).
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs bg-slate-700 px-3 py-1 rounded">TensorFlow</span>
+                        <span class="text-xs bg-slate-700 px-3 py-1 rounded">VAE</span>
+                        <span class="text-xs bg-slate-700 px-3 py-1 rounded">RNN</span>
+                        <span class="text-xs bg-slate-700 px-3 py-1 rounded">Security</span>
+                    </div>
+                    <a href="https://github.com/Ragha822/nids-vae" target="_blank" class="text-cyan-400 hover:text-cyan-300 font-bold">
+                        View on GitHub →
+                    </a>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="card p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold text-cyan-400 mb-3">TP Council Analytics</h3>
+                    <p class="text-slate-400 text-sm mb-4">Real-time gaming stats aggregation platform</p>
+                    <p class="text-slate-300 mb-6">
+                        Full-stack SaaS platform for Clash Royale analytics. Redis caching (45% faster), GitHub Actions CI/CD (zero-downtime deployments).
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs bg-slate-700 px-3 py-1 rounded">React</span>
+                        <span class="text-xs bg-slate-700 px-3 py-1 rounded">Node.js</span>
+                        <span class="text-xs bg-slate-700 px-3 py-1 rounded">MongoDB</span>
+                        <span class="text-xs bg-slate-700 px-3 py-1 rounded">CI/CD</span>
+                    </div>
+                    <a href="https://github.com/rohitmr619/TPCouncil" target="_blank" class="text-cyan-400 hover:text-cyan-300 font-bold">
+                        View on GitHub →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center">
+                <span class="gradient-text">Professional Experience</span>
+            </h2>
+
+            <div class="timeline">
+                <!-- Experience 1 -->
+                <div class="timeline-item">
+                    <h3 class="text-2xl font-bold text-cyan-400 mb-2">SDE Intern</h3>
+                    <p class="text-slate-400 font-semibold mb-4">Medicodio AI | Jan 2025 – Present</p>
+                    <ul class="text-slate-300 space-y-2">
+                        <li>• Architected CI/CD pipelines reducing deployment time by 40%</li>
+                        <li>• Developed production microservices using Node.js/Express with OAuth 2.0</li>
+                        <li>• Managed AWS deployments with auto-scaling (35% resource optimization)</li>
+                        <li>• Collaborated with DevOps team on infrastructure automation</li>
+                    </ul>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="timeline-item">
+                    <h3 class="text-2xl font-bold text-cyan-400 mb-2">Core Publicity Member</h3>
+                    <p class="text-slate-400 font-semibold mb-4">CodeClub – KLE Tech | Feb 2024 – Jan 2025</p>
+                    <ul class="text-slate-300 space-y-2">
+                        <li>• Led publicity campaigns for 10+ coding events and workshops</li>
+                        <li>• Increased club engagement by 60% and grew member base to 200+</li>
+                        <li>• Developed creative outreach strategies and campus initiatives</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-gradient-to-b from-transparent to-black/50">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8">
+                <span class="gradient-text">Let's Connect</span>
+            </h2>
+            <p class="text-slate-300 text-lg mb-12">
+                I'm always interested in discussing DevOps, cloud architecture, and building scalable systems. 
+                Feel free to reach out!
+            </p>
+            
+            <div class="flex justify-center gap-6 mb-12">
+                <a href="mailto:raghavarshini822@gmail.com" class="px-8 py-3 bg-cyan-500 text-black font-bold rounded-lg hover:bg-cyan-400 transition">
+                    Email Me
+                </a>
+                <a href="https://github.com/Ragha822" target="_blank" class="px-8 py-3 border-2 border-cyan-500 text-cyan-400 font-bold rounded-lg hover:bg-cyan-500/10 transition">
+                    GitHub
+                </a>
+                <a href="https://linkedin.com/in/raghavarshini-k-8b792026a/" target="_blank" class="px-8 py-3 border-2 border-cyan-500 text-cyan-400 font-bold rounded-lg hover:bg-cyan-500/10 transition">
+                    LinkedIn
+                </a>
+            </div>
+
+            <div class="card p-8 rounded-xl">
+                <h3 class="text-xl font-bold text-cyan-400 mb-4">Quick Info</h3>
+                <p class="text-slate-300 mb-2"><strong>Email:</strong> raghavarshini822@gmail.com</p>
+                <p class="text-slate-300 mb-2"><strong>Phone:</strong> +91 90083 67816</p>
+                <p class="text-slate-300"><strong>Location:</strong> Bengaluru, Karnataka, India</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-700 py-8 px-6 text-center text-slate-400">
+        <p>© 2025 Raghavarshini K. All rights reserved.</p>
+        <p class="mt-2 text-sm">Crafted with passion for DevOps & Cloud Technology</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('.card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
